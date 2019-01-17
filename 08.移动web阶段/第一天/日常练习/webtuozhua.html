@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: 0;
+        }
+
+        .div {
+            margin: 0 auto;
+            width: 100%;
+            min-width: 320px;
+            max-width: 640px;
+            height: 1000px;
+            background-color: #ccc;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+    <script>
+        window.onload = function () {
+            var startX, startY, moveX, moveY, currentX, currentY;
+            var box = document.querySelector('.box');
+            // 开始触摸
+            document.addEventListener("touchstart", function (e) {
+                startX = e.targetTouches[0].clientX;
+                startY = e.targetTouches[0].clientY;
+                console.log(startX + ":" + startY);
+
+            });
+            // 触摸滑动,持续触发
+            document.addEventListener("touchmove", function (e) {
+                // 记录手指滑动过程中的坐标值
+                moveX = e.targetTouches[0].clientX;
+                moveY = e.targetTouches[0].clientY;
+                console.log(moveX + ":" + moveY);
+                // 计算与上一次的坐标差异7
+                currentX = moveX - startX;
+                currentY = moveY - startY;
+                e.target.style.transform = "translate(" + currentX + "px," + currentY + "px)";
+            });
+            document.addEventListener('touchend', function () {
+            });
+        }
+    </script>
+</body>
+
+</html>

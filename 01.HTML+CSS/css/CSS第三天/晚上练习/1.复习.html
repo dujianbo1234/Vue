@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	1.复习
+		复合选择器
+			后代选择器  .one a{}
+			子代选择器  .one > a{}
+			并集选择器 	h1, p, .one{}
+			交集选择器 	p.one{}
+			链接伪类   	a:hover{}
+		显示模式
+			display:block; 转换成块级元素
+					inline; 转换成行内元素
+					inline-block; 转换成行内块元素
+
+			三种元素模式之间的区别:
+				1.是否有宽高
+				2.是否独占一行			
+
+		背景属性
+			background-color:red;         背景颜色
+			background-image:url();       背景图片
+			background-repeat:no-repeat;  背景平铺
+			background-position:X轴 y轴;  背景位置
+			background-attachment:fixed;  背景固定
+			background:url() no-repeat 0 0 red; 背景复合属性
+
+	-------------------------------------------------------------
+	1.css三大理论
+		层叠性: 相同属性覆盖,不同属性叠加,就近原则
+		继承性: 子元素可以直接获得父元素的某些属性(字体相关属性,text-align,color,line-height)
+		权重优先级: 不同选择器作用在同一标签上,权重大的优先显示.
+			标签选择器 < 类选择器(伪类) < id选择器 < 行内样式 < !important
+				1			10		   100		 1000		无穷大
+			1.权重可以叠加 .one a{}  11
+			2.继承权重为0(权重必须在自己身上才有效果.)
+			3.权重不能越级
+			
+	2.盒子模型(border padding margin)
+
+		border 边框
+		border:1px solid red;
+		边框线条类型: solid 实线
+					  dotted 点线
+					  dashed 虚线
+		border-top: 1px solid red;
+		border-bottom
+		border-left
+		border-right
+		border-collapse:collapse; 细线表格
+
+		内边距: 可以实现盒子内的距离调整
+		padding-top:10px;    上内边距10px
+		padding-right:10px;  右内边距10
+		padding-bottom:10px; 下内边距10
+		padding-left:10px;   左内边距10
+
+		padding:20px; 上下左右内边距都是20
+		padding:10px 20px;  上下10 左右20
+		padding:10px 20px 30px 40px;  上10 右20 下30 左40(顺时针:上右下左)
+
+		padding:10px 30px 50px;  上10 左右30  下50
+
+
+		外边距: 可以实现盒子与盒子之间的距离
+		margin-top:10px; 上外边距10px
+
+		margin:100px auto 0;    上100px 左右居中 下0
+
+	3.盒子模型的问题
+		1.盒子在页面中是实际大小:   宽高 + padding + border
+
+		2.padding会撑大盒子,导致设计标准和页面显示不一样,需要减去撑大的值.(有width属性的盒子才会被撑大)
+		
+		3.行内元素的  上下 内外边距无效:  margin-top margin-bottom padding-top padding-bottom
+
+		4.margin会出现: 合并和塌陷的现象
+			margin的合并: 上下盒子,上盒子margin-bottom:100px; 下盒子margin-top:50px; 最终间距100,避免就好了
+			margin的塌陷:  父子盒子, 子盒子给margin-top:100px; 导致父盒子一起掉下来,解决办法: border-top padding-top overflow:hidden;
+
+		5.调整距离的时候稳定性
+			宽高 >  padding > margin
+
+	4.居中问题
+
+		块级元素居中:  margin: 0 auto;  (必备条件必须有宽,左右auto)
+		行内元素或行内块元素或文字居中: text-align:center; (必须给父元素)
+
+
+	5.图片的操作
+		只要你能实现效果,你想用啥都行
+		img插入图: 产品展示效果用img     ---盒子模型调整位置
+		background背景: 修饰性的图片都可以是背景图----background-position:x轴 y轴;
+
+	
+	6.清除默认样式
+		*{
+			margin:0;
+			padding:0;
+			list-style:none; 清除列表圆点
+		}
+
+		ul{
+			list-style:none;
+		}
+		
+	1.复习抄1遍
+	2.导航写一个遍
+	3.新闻列表写一遍.
+
+</body>
+</html>

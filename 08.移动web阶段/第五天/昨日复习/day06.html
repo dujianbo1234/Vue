@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+day05回顾
+1、媒体查询  
+    屏幕划分：
+        超小屏：  xs     0-768
+        小屏：    sm     768-992
+        中屏：    md     992-1200
+        大屏：    lg     >1200
+
+    媒体查询语法：
+    @media  screen  and (max-width:768px){
+        body{
+            background:red;
+        }
+    }
+    @media  screen  and (min-width:768px) and (max-width:992px){
+        body{
+            background:pink;
+        }
+    }
+
+2、栅格   
+    布局容器：  container  &&  container-fluid
+    container  :有宽度原理：媒体查询
+        超小屏：  xs     0-768           width:100%
+        小屏：    sm     768-992         width:750px
+        中屏：    md     992-1200        width:970px
+        大屏：    lg     >1200           width:1170px
+    container-fluid========width:100%
+
+    col-xs-6==========宽度+float+position:relative
+3、rem
+    ui      分成等分     每一等分
+    640      20           32
+
+    设备：
+    320      20          16      ========html:font-size:16px    div{width:10rem}     10*16=160px 
+    360      20          18      ========html:font-size:18px    div{width:10rem}     10*18=180px
+
+    ============================
+     ui      分成等分     每一等分
+    640      6.4         100
+
+    设备：
+    320      6.4         50      ========html:font-size:50px    div{width:3.2rem}      10*16=160px 
+    360      6.4         75      ========html:font-size:75px    div{width:3.2rem}     10*18=180px
+
+
+    $(function(){
+        
+        $(window).on("resize",function(){
+            var  width=$(window).width();  //屏幕的宽度
+            var  fontSize=width/6.4        //分成6.4等分
+            $("html").css("font-size",fontSize)
+        }).trigger("resize")
+    })
+
+    </body>
+</html>

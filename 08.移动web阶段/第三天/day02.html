@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+    </head>
+    <body>
+
+1、头部颜色渐变：
+    1、获取两个对象：轮播图盒子+头部盒子
+    2、window.onscroll
+        a.获取滚动的高度   注意兼容性写法： var offsetTop=document.body.scrollTop||document.documentElement.scrollTop;
+        b.比较滚动高度和轮播图盒子的高度
+            滚动高度<轮播图盒子的高度===========计算背景色值=滚动高度/轮播图盒子的高度
+        c.将比值传给头部子的背景色
+
+
+2、banner
+    1、结构
+        1、获取对象：banner+ul+first(1)+last(8)
+        2、ul.insertBefore(两个参数:插入的对象，插入的位置)======
+            ul.appendChild(first(1).cloneNode(true))
+            ul.insertBefore(last(8).cloneNode(true),first(1))
+    2、样式
+        1、获取所有的li对象+jd_banner
+        2、获取li的个数
+        3、获取jd_banner的宽度
+        4、ul的宽度=li的个数*jd_banner的宽度
+        5、设置每个li的宽度=jd_banner的宽度
+        6.偏移ul的left=-jd_banner的宽度
+        7、onresize===== 
+            3、获取jd_banner的宽度
+            4、ul的宽度=li的个数*jd_banner的宽度
+            5、设置每个li的宽度=jd_banner的宽度
+            6.偏移ul的left=jd_banner的宽度
+
+
+    3、自动轮播设置定时器      setInterval(function(){},1090)
+        1、index++
+        2、设置偏移   -index*jd_banner的宽度
+        3、需要加过度
+        4、判断index==count-1
+            1、先加上定时器  setTimeout(function(){
+                1、index=1
+                2、取消过度
+                3、ul   设置偏移   -index*jd_banner的宽度
+
+        },300)
+
+    4、touch触发条件：1、必须在移动端+2、他必须有自己的宽高
+        touchstart==touchmove==touchend
+        手指对象：touches ||  targetTouches  ||  changedTouches
+        touches          屏幕上的所有的触摸对象
+        targetTouches    屏幕上所有的目标触摸手指对象
+        changedTouches   最后手指松开的那个手指对象
+
+        如何获取手指触摸对象的坐标   e.targetTouches[0].clentX ||  e.targetTouches[0].clentY
+
+
+
+
+课后总结：
+
+1、结构
+    1、获取banner+ul+ll(last+first)
+    2、ul.appendChild(first.cloneNode(true))  +  ul.insertBefore(last.cloneNode(true),first)
+2、样式
+    1、获取banner+ul+li
+    2、li的个数count
+    3、banner的宽度
+    4、ul的宽度=li的个数*banner的宽度
+    5、li的宽度=banner的宽度
+    6、ul设置偏移=-banner的宽度
+
+    7、onresize  
+        3、banner的宽度
+        4、ul的宽度=li的个数*banner的宽度
+        5、li的宽度=banner的宽度
+        6、ul设置偏移=-banner的宽度
+
+3、自动轮播
+    自动轮播之前声明全局变量index=1;
+    setInterval(function(){
+        1、index++
+        2、ul设置偏移=-index*banner的宽度
+        3、添加transition 动画
+        4、判断
+            1、添加延时器  setTimeout(function(){
+                if（index==count-1）{
+                    1、index=1;
+                    2、取消过渡
+                    3、ul设置偏移=-index*banner的宽度
+                }
+        },200)
+    },1000)
+4、手指滑动
+    var  startX,moveX,disX
+    1、touchstart
+        1、取消定时器
+        2、startX=e.targetTouches[0].clientX
+    2、touchmove
+        1、moveX=e.targetTouches[0].clientX
+        2、disX=moveX-startX
+        3、ul设置偏移=-index*banner的宽度+disX
+        4、取消过渡
+
+5、图片回弹
+    1、判断滑动距离的绝对值大于100
+        1、判断方向
+            滑动距离disX>0  ====index--
+            滑动距离disX<0  ======index++
+            ul.style.left=-index*banner的宽度
+            添加过度
+    2、判断滑动距离的绝对值大于0
+        ul.style.left=-当前的index*banner的宽度
+        添加过度
+
+6、webkitTransitionEnd   监听过度动画结束事件=======
+    判断=======实现无缝滑动
+        index==0                  index=count-2
+        index==count-1            index=1
+        ul.style.left=-当前的index*banner的宽度
+        移除过度
+
+7、解决bug
+    1、touchend事件中初始化statX,moveX,disX
+    2、解决连续滑动
+        添加节流阀
+            1、声明全局变量isEnd=true
+            2、touchmove事件判断isEnd==true
+            3、手指松开touchend=====isEnd=false
+            4、webkitTransitionEnd 事件监听动画走完在设置isEnd=true     
+
+
+
+
+定时器：开启了两次====1、初次进入自调用  2、过度结束的时候重新开始定时器
+过度清除了几次： 
+    1、自动轮播  index===count-1
+    2、touchmove
+    3、无缝滑动   index==0和index==count-1
+
+
+
+dom  插入和添加
+   添加： imgBox.appendChild(first.cloneNode(true))
+   插入： imgBox.insertBefore(last.cloneNode(true),first)
+
+jquery
+   添加： $(imgBox).append(first.clone())
+   插入： last.clone().insertBefore(first)
+获取li的个数
+var  aa=lis.size()
+        console.log(aa,88888);
+ $(window).on("resize",function () {
+    bannerWidth = banner.width();
+    imgBox.width(count * bannerWidth);
+    lis.each(function (index, value) { /* index>>>i ,vaule>>>lis[]*/
+        $(lis[index]).width(bannerWidth);
+    });
+})
+
+
+animate(对象{left:-index*bannerWidth},动画时间,速度,function(){})
+
+zepto的定制
+1、安装node
+2、检测node
+3、找文件  zepto-master
+4、找make文件 添加模块  zepto event ajax form ie fx touch selector
+5、定制  npm   run-script  dist
+
+
+找盘符：   e:
+找文件   cd 加文件路径
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

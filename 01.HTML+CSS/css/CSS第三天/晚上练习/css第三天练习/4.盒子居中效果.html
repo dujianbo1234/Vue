@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin:0 auto;
+			text-align: center;
+		}
+		span{
+			/*将行内元素转换成块级元素,然后给宽,然后给margin:0 auto;*/
+			/* width: 100px;
+			display: block;
+			margin:0 auto; */
+			/*行内元素直接写text-align:center; 是不行的*/
+			/*text-align: center;*/
+			background-color: blue;
+		}
+		.box2{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		测试
+	</div>
+	<div class="box2">
+		<span>span盒子</span>
+	</div>
+	
+	<input type="text">
+</body>
+</html>

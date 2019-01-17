@@ -1,0 +1,367 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 3000px;
+	background-color: #F3F5F7;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+body {
+	background-color: #F4F5F9;
+} 
+
+.header {	
+	width: 100%;
+	height: 102px;
+/*	background-color: red;*/
+	overflow: hidden;
+}
+
+.header_in {
+	/*background-color: #fff;*/
+	height: 42px;
+	margin-top: 30px;
+}
+
+.logo {
+	float: left;
+	width: 195px;
+	height: 42px;
+	background-color: yellow;
+}
+
+.nav {
+	float: left;
+	margin: 0 70px;
+/*	background-color: pink;*/
+}
+
+.nav li {
+	float: left;
+	/*background-color: #333;*/
+	margin-right: 20px;
+}
+
+.nav a {
+	display: block;
+	padding: 0 10px;
+	line-height: 42px;
+	color: #050608;
+	font-size: 18px;
+}
+
+.nav a:hover {
+	border-bottom: 2px solid #00A3FF;
+}
+
+.search {
+	float: left;
+}
+
+.search input {
+	float: left;
+	height: 38px;
+	width: 340px;
+	border:1px solid #00A3FF;
+	padding-left: 20px;
+	color: #C5C6C8;
+}
+
+.search button {
+	float: left;
+	width: 49px;
+	height: 40px;
+	background-image: url(images/btn.png);
+	border: 0;
+}
+
+.user {
+	float: right;
+	width: 130px;
+	height: 42px;
+	/*background-color: blue;*/
+	margin:0 30px;
+	line-height: 42px;
+	color: #C5C6C8;
+	font-size: 12px;
+}
+
+.user img {
+	float: left;
+	margin: 5px 10px 0;
+}
+/*header部分完*/
+.banner {
+	height: 420px;
+	background-color: #1C036B;
+}
+
+.banner .w {
+	height: 420px;
+	background-color: pink;
+	background: url(images/banner2.jpg);
+	background-repeat: no-repeat;
+	margin:0 auto;
+}
+
+.subnav {
+	float: left;
+	height: 420px;
+	width: 150px;
+	padding: 0 20px;
+	background-color: rgba(0 ,0 ,0 , 0.3);
+}
+
+.subnav li {
+	float: left;
+	width: 150px;
+	height: 45px;
+	line-height: 45px;
+}
+
+.subnav span {
+	float: right;
+}
+
+.subnav a {
+	font-size: 14px;
+	color: #fff;
+}
+
+.subnav a:hover {
+	color: #009CD9;
+}
+
+.course {
+	float: right;
+	width: 228px;
+	height:300px;
+	background-color: #fff;
+	margin-top: 50px;
+}
+
+.course h4 {
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	color: #fff;
+	background-color: #9BCEEB;
+}
+
+.course .course_in {
+	padding: 10px 15px 0;
+}
+
+.course li {
+	margin-top: 10px;
+	height: 50px;
+	/*background-color: pink;*/
+	border-bottom: 1px solid #A4A4A4;
+}
+
+/*.course li:hover {
+	color: #23AEFF;
+}*/
+
+
+.course .all {
+	display: block;
+	height: 38px;
+	width: 198px;
+	line-height: 39px;
+	text-align: center;
+	border: 1px solid #23AEFF;
+	margin-top: 10px;
+	color: #23AEFF;
+}
+
+.course .all:hover {
+	background-color: #23AEFF;
+	color: #fff;
+}
+
+.course .course_in h5 {
+	font-size: 16px;
+	color: #474747;
+}
+
+.course .course_in p {
+	font-size: 12px;
+	color: #A4A4A4;
+}
+/*course部分结束*/
+.goods {
+	height: 60px;
+	background-color: #fff;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	margin-top: 10px;
+	line-height: 60px;
+}
+
+.goods h3 {
+	float: left;
+	margin: 0 30px;
+	color: #23AEFF
+}
+
+.goods ul{
+	float: left;
+}
+
+.goods li {
+	float: left;
+}
+
+.goods  li a {
+	color: #0D0D0D;
+	margin:0 20px;
+}
+
+.goods  li a:hover {
+	color: #0BA3FF;
+}
+
+.goods span {
+	color: #BEBEBE;
+}
+
+.goods .goods_r {
+	float: right;
+	padding-right: 30px;
+	font-size: 12px;
+}
+
+.goods .goods_r a {
+	color: #0BA3FF;
+}
+/*goods部分结束*/
+.pic {
+	margin-top: 15px;
+}
+
+.pic .box-hd {
+	height: 60px;
+	line-height: 60px;
+	/*background: red;*/
+}
+
+.pic .box-hd h3 {
+	float: left;
+	font-size: 18px;
+	color: #454648;
+}
+
+.pic .box-hd p {
+	font-size: 12px;
+	float: right;
+	margin-right: 30px;
+}
+
+.pic .box-hd a {
+	color: #9E9FA1;
+}
+
+/*.pic .box-bd ul {
+	float: left;
+}*/
+.pic .box-bd {
+	width: 1215px;
+	overflow: hidden;
+}
+
+.pic .box-bd li {
+	float: left;
+	width: 228px;
+	height: 270px;
+	background-color: #fff;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	margin: 0 15px 15px 0;
+}
+
+.pic .box-bd img {
+	width: 228px;
+}
+
+.pic .box-bd h4 {
+	margin: 20px;
+}
+
+.pic .box-bd p {
+	font-size: 12px;
+	color: #9C9C9C;
+	margin-left: 20px;
+}
+
+.pic .box-bd p span {
+	color: #FF6F0C;
+}
+/*pic部分结束*/
+.footer {
+	height: 400px;
+	background-color: #fff;
+	padding-left: 20px;
+}
+
+.footer .footer-l {
+	float: left;
+}
+
+.footer img {
+	margin:30px 0;
+}
+
+.footer p {
+	color: #5B5B5B;
+	font-size: 12px;
+}
+
+.footer a {
+	display: block;
+	width: 118px;
+	height:34px;
+	line-height: 34px;
+	text-align: center;
+	border: 2px solid #00A7EF;
+	color: #00A7EF;
+	margin-top: 20px;
+}
+
+.footer a:hover {
+	background-color: #00A7EF;
+	color: #fff;
+}
+
+.footer .footer-r {
+	float: right;
+	margin-top: 35px;
+}
+
+.footer .footer-r dl {
+	float: left;
+	margin-left: 150px; 
+}
+
+.footer dt {
+	height: 30px;
+	color: #303030;
+	font-size: 18px;
+}
+
+.footer dd {
+	font-size: 12px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #cas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="600" id="cas"></canvas>
+    <script>
+        var cas = document.getElementById('cas');
+        var ctx = cas.getContext('2d');
+        var step = 10;
+        start = 100;
+        // 大正方形
+        ctx.moveTo(100,100);
+        ctx.lineTo(400,100);
+        ctx.lineTo(400,400);
+        ctx.lineTo(100,400);
+        ctx.lineTo(100,100);
+
+        // 小正方形
+        ctx.moveTo(200,200);
+        ctx.lineTo(200,300);
+        ctx.lineTo(300,300);
+        ctx.lineTo(300,200);
+        ctx.lineTo(200,200);
+
+        ctx.fill();
+    </script>
+</body>
+
+</html>

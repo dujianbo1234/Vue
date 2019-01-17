@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var arr1 = ['扎根三', '枣阳', '襄阳']
+    var arr2 = [12, 32, 98, 78, 56, 34]
+
+    // 数组.方法(function (item, index) {})
+    // 1. forEach  等价 for
+    arr1.forEach(function (item, index) {
+        // console.log(item, index)
+    })
+
+    // 2. map 映射
+    var arrMap = arr2.map(function (item, index) {
+        return item * 2
+    })
+    console.log(arrMap, 'map')
+
+    // 3. filter 过滤
+    var arrFilter = arr2.filter(function (item, index) {
+        // return 条件  将满足条件的那一项返回给数组
+        return item > 50
+    })
+    console.log(arrFilter, 'filter')
+
+    // 4. every 每一个的意思 他会返回ture或false
+    // 所有的条件全部满足就返回ture否则返回false
+    var flagEvery = arr2.every(function (item, index) {
+        return item > 30
+    })
+    console.log(flagEvery, 'every')
+
+    
+    // 5. some 每一个的意思 他会返回ture或false
+    // 只要有一个条件满足就返回ture否则返回false
+    var flagSome = arr2.some(function (item, index) {
+        return item > 30
+    })
+    console.log(flagSome, 'some')
+</script>

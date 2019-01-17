@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	1.学习HTML就是认识标签
+	2.认识标签
+		标题标签<h1></h1>
+		段落标签<p></p>
+		换行标签<br>
+		水平线标签<hr>
+		图片标签<img src="图片地址" alt="替换文本" title="提示文本" width="100" height="100" border="1">
+		a标签: <a href="#" target="_blank">首页</a>
+		
+		<base target="_blank">
+
+		文本格式化标签
+			加粗	<b></b><strong></strong>
+			斜体	<i></i><em></em>
+			删除线标签<s></s><del></del>
+			下划线标签<u></u><ins></ins>
+
+			工作中用的最多的两个文本格式化标签: <b></b>	<em></em>
+		
+		预格式化标签: <pre></pre>
+
+		两个透明盒子:
+			<div></div>
+			<span></span>
+
+		特殊字符: &nbps; &gt; &lt;
+
+		路径的概念:
+			同级目录:直接写图片名字
+			下一级路径:文件夹名字/图片名字	images/a.jpg
+			上一级路径:../图片名字			../a.jpg
+
+		-----------------------------------------------
+		重点标签:
+			<h1></h1>
+			<p></p>
+			<img src="" alt="">
+			<a href=""></a>
+			<div></div>
+			<span></span>
+		-----------------------------------------------
+		今日知识:
+			0.锚点链接
+				作用:实现页面之内的跳转
+				1.锚: <a href="跳转的位置:名字 #one"></a>
+				2.点:任意标签添加id <h2 id="ine"></h2>
+
+			1.表格
+				表格标签: table
+				表格的行: tr
+				表格的单元格; td
+
+				表格的其它标签:
+					th 表头标签
+					caption 表格标题
+
+					结构标签:在页面上没有任何效果,只是增加代码的阅读性
+						thead 表格头部
+						tbody 表格内容区域
+
+				表格的属性:
+					width
+					height
+					border
+					align 对齐
+					cellspacing	单元格与单元格间距
+					cellpadding	单元格与内容之间距离
+						cell	把两个属性都写上,值都是0
+	
+				跨行跨列:
+					rowspan 跨行
+					colspan 跨列
+						1.需要判断是跨行还是跨列	rowspan
+						2.在那个标签上写
+						3.删除哪个
+
+			2.列表
+
+				无序列表	ul li
+				有序列表	ol li
+				自定义列表	dl dt dd
+				注意:自定义列表	dt和dd是并列关系
+
+				注意:多个单词组成的标签,只能在内层标签写内容.
+				<ul>
+					<li></li>
+				</ul>
+
+			3.表单
+				<form action="">
+
+				普通文本框 <input type="text" value="默认内容">
+				密码框:	<input type="password">
+				单选框:	<input type="radio" name="sex
+				">
+				多选框:	<input type="checkbox" checked>	
+				下拉菜单:
+						<select>
+							<option value="提交给后台的" selected="">武汉</option>
+						</select>
+				文本域:也叫多行文本框
+						<textarea ></textarea>
+				提交按钮:
+						<input type="submit" value="登录">
+						<input type="reset" value="清空">
+
+				图通按钮: <input type="button" value="登录">	
+				图片按钮: <input type="image" src="图片地址">
+
+				文件上传: <input type="file">
+
+				</form>
+				label标签:实现点击文字让表单选中.
+					1.直接使用label标签包裹文字和表单
+					2.使用for id方式实现:label标签包裹文字,通过for属性和表单上的id属性对应.
+
+				提交表单数据的两个必要条件:
+					1.必须有form标签
+					2.必须有submit提交
+
+				form表单域:直接使用form标签,包裹需要提交的表单内容即可.
+
+
+				所有的编程语言都是定义+翻译(见过,知道名字,写过,会抄)
+
+			--------------------------------------------
+
+			列表
+				无序列表:
+					<ul>
+						<li></li>
+					</ul>
+				有序列表:
+					<ol>
+						<li></li>
+					</ol>
+				自定义列表:
+					<dl>
+						<dt></dt>
+						<dd></dd>
+						<dd></dd>
+
+						<dt></dt>
+						<dd></dd>
+						<dd></dd>
+					</dl>
+			表格
+				table
+				tr
+				td
+
+			表单
+				<input type="text">
+				<input type="password">
+				<input type="submit">
+
+			html的发展来源
+				html早起是为了将论文电子化
+					标题 1-6
+					段落 p
+					图片 img
+					分页 a
+
+					文本格式化: b i u s
+
+					列表:ul ol dl
+
+					div span
+
+					input
+
+					table
+
+				怎么建立知识体系?
+					你打开三四个网页>说出你见到的有哪些标签?
+
+					文字
+						标题标签
+						段落标签
+
+						列表:批量处理文字,后来演变成批量处理样式.
+
+					图片
+						<img src="" alt="">
+					链接
+						<a href=""></a>
+					输入框
+						<input type="text">
+						<input type="password">
+						<input type="submit">
+				学习的过程实际上是先做加法,后做减法,最后忘掉.
+	
+	1.学习HTML就是认识标签
+	2.认识标签
+		标题标签 <h1></h1>
+		段落标签 <p></p>
+		换行标签 <br>
+		水平线标签 <hr>
+		图片标签 <img src="图片地址" alt="替换文本" title="提示文本" width="100" height="100" border="1">
+		a标签 <a href="#" target="_blank">首页</a>
+
+		<base target="_blank">
+
+		文本格式化标签:
+			加粗 <b></b><strong></strong>
+			斜体 <i></i><em></em>
+			删除线标签 <s></s><del></del>
+			下划线标签 <u></u><ins></ins>
+
+			工作中用的最多的两个文本格式化标签: <b></b>  <em></em>
+		预格式化标签: <pre></pre>
+		两个透明盒子
+			<div></div>
+			<span></span>
+
+		特殊字符: &nbsp; &gt; &lt;
+
+		路径的概念:
+			同级目录:直接写图片名字
+			下一级路径:文件夹名字/图片名字  images/a.jpg
+			上一级路径:../图片名字	../a.jpg
+
+		-------------------------------------------------------------
+		重点标签:
+			<h1></h1>
+			<p></p>
+			<img src="" alt="">
+			<a href=""></a>
+
+			<div></div>
+			<span></span>
+		-------------------------------------------------------------
+		今日知识:
+			0.锚点链接
+				作用:实现页面之内的转跳
+
+				1.锚: <a href="跳转的位置:名字 #one"></a>
+				2.点: 任意标签添加id <h2 id="one"></h2>	
+
+			1.表格
+				表格的标签 table
+				表格的行: tr
+				表格的单元格: td
+
+				表格的其它标签:
+					th 表头标签
+					caption 表格标题
+
+					结构标签:在页面上没有任何效果,只是增加代码的阅读性
+						thead 表格头部
+						tbody 表格内容区域
+				表格的属性:
+					width
+					height
+					border
+					align 对齐
+					cellspacing 单元格与单元格间距
+					cellpadding 单元格与内容之前距离
+						cell 把梁哥属性都写上,值都是0.
+				跨行跨列:
+					rowspan 跨行
+					colspan 跨列
+						1.需要判断是跨行还是跨列
+						2.在那个标签上写
+						3.删除哪个
+
+			2.列表
+
+				无序列表	ul li
+				有序列表	ol li
+				自定义列表  dl dt dd
+				注意:自定义列表 dt和dd是并列关系.
+
+				注意:多个单词组成的标签,只能在内层标签写内容.
+				<ul>
+					<li></li>
+				</ul>
+			3.表单
+				<form action="">
+					
+					普通文本框 <input type="text" value="默认内容">
+					密码框: <input type="password">
+					单选框: <input type="radio" name="sex">
+					多选框: <input type="checkbox" checked>
+					下拉菜单:
+							<select>
+								<option value="提交给后台的" selected>武汉</option>
+							</select>
+					文本域:也叫多行文本框
+							<textarea></textarea>
+					提交按钮:
+							<input type="submit" value="登录">
+							<input type="reset" value="清空">
+
+					普通按钮: <input type="button" value="登录">	
+					图片按钮: <input type="image" src="图片地址">	
+					文件上传: <input type="file">
+
+				</form>
+				label标签:现实点击文字让表单选中.
+					1.直接使用label标签包裹文字和表单
+					2.使用for id方式实现:label标签包裹文字,同构for属性和表单上的id属性对应.
+
+				提交表单数据的两个必要条件:
+					1.必须有form标签
+					2.必须有sumbmit提交
+
+				form表单域:直接使用form标签,包裹需要提交的表单内容即可.
+
+				所有的编程语言都是定义+翻译(见过,知道名字,写过,会抄)
+
+		-----------------------------------------------------------------
+
+			列表
+				无序列表:
+					<ul>
+						<li></li>
+					</ul>
+				有序列表:
+					<ol>
+						<li></li>
+					</ol>
+				自定义列表:
+					<dl>
+						<dt></dt>
+						<dd></dd>
+						<dd></dd>
+
+						<dt></dt>
+						<dd></dd>
+						<dd></dd>
+					</dl>
+			表格
+				table
+				tr
+				td
+			表单
+				<input type="text">
+				<input type="passwprd">
+				<input type="submit">
+
+			html的发展来源:
+				html早期是为了将论文电子化
+					标题 1-6
+					段落 p
+					图片 img
+					分页 a
+
+					文本格式化:b i u s
+
+					列表:ul ol dl
+
+					div span
+
+					input
+
+					table
+
+				怎么建立知识体系?
+					你打开三四个网页,说出你见到的有哪些标签.
+
+					文字
+						标题标签
+						段落标签
+
+						列表:批量处理文字,后来演变成批量处理样式.
+
+					图片
+						<img src="" alt="">
+					链接
+						<a href=""></a>
+					输入框
+						<input type="text">
+						<input type="password">
+						<input type="submit">
+				学习的过程实际上是先做加法,后做减法,最后忘掉.
+	
+
+	1.学习HTML就是认识标签
+	2.认识标签
+		标题标签 <h1></h1>
+		段落标签 <p></p>
+		换行标签 <br>
+		水平线标签 <hr>
+		图片标签 <img src="图片地址" alt="替换文本" title="提示文本" width="100" height="100" border="1">
+		a标签 <a href="#" target="_blank"></a>
+
+		<base target="_blank">
+
+		文本格式化标签:
+			加粗 <b></b><strong></strong>
+			倾斜 <i></i><em></em>
+			删除线标签 <s></s><del></del>
+			下划线标签 <u></u><ins></ins>
+
+			工作中用的最多的两个文本格式化标签: <b></b>  <em></em>
+
+		预格式化标签: <pre></pre>
+
+		两个透明盒子:
+			<div></div>
+			<span></span>
+
+		特殊字符: &nbsp; &gt; &lt;
+
+		路径的概念:
+			同级路径:直接写图片名字
+			下一级路径:文件夹名字/图片名字	images/a.jpg
+			上一级路径:../图片名字	../a.jpg
+
+		--------------------------------------------------------------------------------------
+		重点标签:
+			<h1></h1>
+			<p></p>
+			<img src="" alt="">
+			<a href=""></a>
+
+			<div></div>
+			<span></span>
+		--------------------------------------------------------------------------------------
+		今日知识:
+			0.锚点链接
+				作用:实现页面之内的转跳
+
+				1.锚: <a href="专挑的位置:名字 #one"></a>
+				2.点: 任意标签调价id <h2 id="one"></h2>
+
+
+			1.表格
+				表格标签: table
+				表格的行: tr
+				表格的单元格: td
+
+				表格的其它标签:
+					th 表头标签
+					caption 表格标题
+
+					结构标签:在页面上没有任何效果,只是增加代码的阅读性
+						thead 表格头部
+						tbody 表格内容区域
+
+				表格的属性:
+					width
+					height
+					border
+					align 对齐
+					cellsacing 单元格与单元格间距
+					cellpadding 单元格与内容之间距离
+						cell 把梁哥属性都写上,值都是0.
+
+				跨行跨列:
+					rowspan 跨行
+					colspan 跨列
+						1.需要判断是跨行还是跨列 rowspan
+						2.在哪个标签上写
+						3.删除哪个
+
+
+			2.列表
+
+				无序列表 ul li
+				有序列表 ol li
+
+				自定义列表 dl dt dd
+				注意:自定义列表 dt和dd是并列关系
+
+				注意:多个单词组成的标签,只能在内层标签写内容.
+				<ul>
+					<li></li>
+				</ul>
+
+
+			3.表单
+				<form action="">
+				普通文本框 <input type="text">
+				密码框:<input type="password">
+				单选框:<input type="radio" name="sex">
+				多选框:<input type="checkbox" checked>
+				下拉菜单:
+					<select>
+						<option value="提交给后台的" selected>武汉</option>
+					</select>
+				文本域:也叫多行文本框
+					<textarea></textarea>
+				提交按钮:
+					<input type="submit" value="登录">
+					<input type="reset" value="清除">
+
+				普通按钮: <input type="button" value="登录">
+				图片按钮: <input type="image" src="图片地址">
+
+				文件上传: <input type="file">
+
+				</form>
+				label标签:实现点击文字让表单选中
+					1.直接使用label标签包裹文字和表单
+					2.使用for id方式实现:拉本来标签包裹文字,通过for属性和表单上的id属性对应.
+
+				提交表单数据的两个必要条件:
+					1.必须有form标签
+					2.必须有submit提交
+
+				form表单域:直接使用form标签,包裹需要提交的表单内容即可.
+
+				所有的编程语言的都是定义+翻译(见过,知道名字,写过,会抄)
+
+	----------------------------------------------------------------------------------------------
+
+	列表
+		无序列表:
+			<ul>
+				<li></li>
+			</ul>
+		有序列表:
+			<ol>
+				<li></li>
+			</ol>
+		自定义列表:
+			<dl>
+				<dt></dt>
+				<dd></dd>
+				<dd></dd>
+
+				<dt></dt>
+				<dd></dd>
+				<dd></dd>
+			</dl>
+	
+	表格
+		table
+		tr
+		td
+
+	表单
+		<input type="text">
+		<input type="password">
+		<input type="submit">
+
+	html的发展来源
+		html早期是为了讲论文电子化
+			标题 1-6
+			段落 p
+			图片 img
+			分页 a
+
+			文本格式化:b i u s
+
+			列表:ul ol dl
+
+			div span
+
+			input
+
+			table
+
+		怎么建立知识体系?
+			你打开三四个网页,说出你见到的有哪些标签?
+
+			文字
+				标题标签
+				段落标签
+
+				列表:批量处理文字,后来演变成批量处理样式.
+
+			图片:
+				<img src="" alt="">
+			链接
+				<a href=""></a>
+			输入框
+				<input type="text">
+				<input type="pasword">
+				<input type="submit">
+
+		学习的过程实际上是先做加法,后做减法,最后忘掉.
+
+
+	1.学习HTML就是认识标签
+	2.认识标签
+		标题标签
+
+
+</body>
+</html>

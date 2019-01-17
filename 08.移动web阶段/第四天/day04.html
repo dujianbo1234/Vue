@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title></title>
+</head>
+<body>
+1/webkiTransitionEnd          过度结束事件=====需要有过度
+2/zepto   =========移动端就是使用它  
+定制：
+    1、安装node
+    2、node  -v
+    3、修改make
+    4、找文件路径  
+    5、npm  run-script  dist
+3/全屏页面设置+一边固定另一边自适应
+    全屏页面设置：html,body{
+        width:100%;height:100%
+    }
+
+    一边固定另一边自适应:
+        左边：width:100px;float:left
+        右边：margin-left:100px
+
+区间：
+    静止区间：
+        最大静止区间的值：0
+        最小静止值：父盒子的高度-子盒子的高度
+    滑动区间：
+        最大滑动区间：最大静止值+100
+        最小滑动区间：最小静止值-100
+
+touchmove判断滑动区间
+touchend判断静止区间
+
+步骤分析：
+1、获取对象：父盒子+子盒子
+2、获取父盒子+子盒子的高度
+3、计算静止区间+滑动区间
+4、设置全局currentY=0 目的是记录最终盒子的位置
+5、touchmove
+    判断滑动区间
+    盒子设置偏移+过度
+    设置最终的currentY
+6、touchend
+    判断静止区间
+    盒子设置偏移+过度
+    设置最终的currentY
+
+
+
+
+tap事件===轻触事件
+    touchstart
+        判断单手指
+        获取时间戳
+        坐标
+    touchend
+        判断单手指
+        判断时间差=当前的时间戳-touchstart中的时间戳
+        抖动值
+
+
+
+置顶
+1、点击ulBox      itcast.tap(ulBox,function(e){
+    1、获取当前的li
+    2、排他   移除所有li元素的类名给当前添加一个类名
+
+    3、获取index   遍历所有的li ===lis.index=i
+    4、往上走动
+        判断： if: -index*height<最小静止值：父盒子的高度-子盒子的高度==========ulBox.style.top=最小静止值 currentY=最小静止值
+        else:  =======ulBox.style.top=-index*height   currentY=-index*height
+})
+  
+
+a)touch  只能在移动端使用  pc端会无效
+b)touch  会产生点透
+c)click   不会产生点透,但是会有时间延迟  
+fastclick  既不会产生延迟 + 不会产生点透 +  即可以在pc也可以在移动端
+使用步骤：  3步走
+1、引入文件
+2、js初始化代码
+3、绑定事件
+    $(function() {
+        FastClick.attach(document.body);
+    });
+
+    tap.addEventListener("click",function(){
+        tap.style.visibility="hidden";
+    })
+</body>
+</html>

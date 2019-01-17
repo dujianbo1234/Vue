@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网页中常见的浮动布局</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			width: 1200px;
+			height: 300px;
+			background-color: red;
+			margin: 0 auto;
+		}
+
+		.box div {
+			width: 400px;
+			height: 300px;
+			background-color: blue;
+			font-size: 50px;
+			color: #fff;
+		}
+
+		.box .left {
+			float: left;
+		}
+
+		.box .right {
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="left">左盒子</div>
+		<div class="right">右盒子</div>
+	</div>
+	
+</body>
+</html>

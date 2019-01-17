@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+i,
+em {
+	font-style: normal;
+}
+
+.w {
+	width: 1200px;
+	margin:0 auto;
+}
+
+body {
+	background-color: #F4F5F9;
+}
+
+input {
+	outline: none;
+}
+
+.header {
+	height: 41px;
+	margin: 30px auto;
+	background-color: #fff;
+}
+
+.logo {
+	float: left;
+	width: 195px;
+	height: 41px;
+	background-color: pink;
+}
+
+.header-1{
+	float: left;
+	background-color: yellow;
+	margin:0 70px;
+} 
+
+.header-1 li {
+	float: left;
+	line-height: 41px;
+}
+
+.header-1 a {
+	margin: 0  10px;
+}
+
+.search {
+	float: left;
+	width: 411px;
+	height: 41px;
+	background-color: yellow;
+}
+
+.search input {
+	float: left;
+	width: 360px;
+	height: 38px;
+	border: 1px solid #00A5FF;
+}
+
+.search button {
+	float: left;
+	width: 49px;
+	height: 40px;
+	border: 0;
+	background-color: #00A1F4;
+}
+
+.user {
+	float: right;
+	width: 120px;
+	height: 41px;
+	margin-right: 30px;
+	background-color: red;
+}
+
+.nav {
+	height: 420px;
+	background-color: #1C036B;
+}
+
+.bgc {
+	height: 100%;
+	background-color: pink;
+}
+
+.nav-l {
+	float: left;
+	width: 150px;
+	height: 395px;
+	background-color: rgba(0,0,0,0.3);
+	padding: 25px 20px 0;
+}
+
+/*.nav-l ul {
+	float: left;
+}*/
+
+.nav-l li {
+	float: left;
+	background-color: #fff;
+	margin-bottom: 24px;
+}
+
+.nav-l a {
+	float: left;
+	width: 150px;
+}
+
+.nav-r {
+	width: 228px;
+	height: 300px;
+	float: right;
+	margin-top: 50px;
+	background-color: #fff;
+}
+
+.nav-r  .nav-r-hd {
+	float: left;
+	width: 228px;
+	height: 48px;
+	background-color: #9BCEEB;
+}
+
+.nav-r  .nav-r-bd {
+	float: left;
+	width: 228px;
+	height: 252px;
+	background-color: yellow;
+}

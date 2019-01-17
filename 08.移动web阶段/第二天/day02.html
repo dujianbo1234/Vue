@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    </head>
+    <body>
+
+1、头部颜色渐变：
+    1、获取两个对象：轮播图盒子+头部盒子
+    2、window.onscroll
+        a.获取滚动的高度   注意兼容性写法： var offsetTop=document.body.scrollTop||document.documentElement.scrollTop;
+        b.比较滚动高度和轮播图盒子的高度
+            滚动高度<轮播图盒子的高度===========计算背景色值=滚动高度/轮播图盒子的高度
+        c.将比值传给头部子的背景色
+
+
+2、banner
+    1、结构
+        1、获取对象：banner+ul+first(1)+last(8)
+        2、ul.insertBefore(两个参数:插入的对象，插入的位置)======
+            ul.appendChild(first(1).cloneNode(true))
+            ul.insertBefore(last(8).cloneNode(true),first(1))
+    2、样式
+        1、获取所有的li对象+jd_banner
+        2、获取li的个数
+        3、获取jd_banner的宽度
+        4、ul的宽度=li的个数*jd_banner的宽度
+        5、设置每个li的宽度=jd_banner的宽度
+        6.偏移ul的left=-jd_banner的宽度
+        7、onresize===== 
+            3、获取jd_banner的宽度
+            4、ul的宽度=li的个数*jd_banner的宽度
+            5、设置每个li的宽度=jd_banner的宽度
+            6.偏移ul的left=jd_banner的宽度
+
+
+    3、自动轮播设置定时器      setInterval(function(){},1090)
+        1、index++
+        2、设置偏移   -index*jd_banner的宽度
+        3、需要加过度
+        4、判断index==count-1
+            1、先加上定时器  setTimeout(function(){
+                1、index=1
+                2、取消过度
+                3、ul   设置偏移   -index*jd_banner的宽度
+
+        },300)
+
+    4、touch触发条件：1、必须在移动端+2、他必须有自己的宽高
+        touchstart==touchmove==touchend
+        手指对象：touches ||  targetTouches  ||  changedTouches
+        touches          屏幕上的所有的触摸对象
+        targetTouches    屏幕上所有的目标触摸手指对象
+        changedTouches   最后手指松开的那个手指对象
+
+        如何获取手指触摸对象的坐标   e.targetTouches[0].clentX ||  e.targetTouches[0].clentY
+
+
+
+
+
+
+
+课后总结：
+
+1、结构
+    1、获取banner+ul+ll(last+first)
+    2、ul.appendChild(first.cloneNode(true))  +  ul.insertBefore(last.cloneNode(true),first)
+2、样式
+    1、获取banner+ul+li
+    2、li的个数count
+    3、banner的宽度
+    4、ul的宽度=li的个数*banner的宽度
+    5、li的宽度=banner的宽度
+    6、ul设置偏移=-banner的宽度
+
+    7、onresize  
+        3、banner的宽度
+        4、ul的宽度=li的个数*banner的宽度
+        5、li的宽度=banner的宽度
+        6、ul设置偏移=-banner的宽度
+
+3、自动轮播
+    自动轮播之前声明全局变量index=1;
+    setInterval(function(){
+        1、index++
+        2、ul设置偏移=-index*banner的宽度
+        3、添加transition 动画
+        4、判断
+            1、添加延时器  setTimeout(function(){
+                if（index==count-1）{
+                    1、index=1;
+                    2、取消过渡
+                    3、ul设置偏移=-index*banner的宽度
+                }
+        },200)
+    },1000)
+4、手指滑动
+    var  startX,moveX,disX
+    1、touchstart
+        1、取消定时器
+        2、startX=e.targetTouches[0].clientX
+    2、touchmove
+        1、moveX=e.targetTouches[0].clientX
+        2、disX=moveX-startX
+        3、ul设置偏移=-index*banner的宽度+disX
+        4、取消过渡
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

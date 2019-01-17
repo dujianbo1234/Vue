@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>布局练习</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		body {
+			height: 2000px;
+		}
+
+		.top {
+			height: 100px;
+			width: 100%;
+			background-color: pink;
+		}
+
+		.banner {
+			width: 1200px;
+			height: 500px;
+			margin: 30px auto;
+			background-color: skyblue;
+		}
+
+		.box1 {
+			width: 1200px;
+			height: 200px;
+			margin: auto;
+		}
+
+		.box1 li {
+			width: 300px;
+			height: 200px;
+			float: left;
+		}
+
+		.box1 .pink {
+			background-color: pink;
+		}
+
+		.box1 .yellow {
+			background-color: yellow;
+		}
+
+		.foolter {
+			height: 100px;
+			width: 100%;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">top</div>
+	<div>
+		<div class="banner">banner</div>
+		<ul class="box1">
+			<li class="pink">1</li>
+			<li class="yellow">2</li>
+			<li class="pink">3</li>
+			<li class="yellow">4</li>
+		</ul>
+	</div>
+	<div class="foolter">foolter</div>
+</body>
+</html>

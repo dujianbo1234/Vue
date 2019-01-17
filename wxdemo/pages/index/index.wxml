@@ -1,0 +1,53 @@
+<!-- 轮播图 -->
+<swiper class='slides'>
+  <swiper-item>
+    <image src="/locally-resource/images/banner-01.png" />
+  </swiper-item>
+  <swiper-item>
+    <image src="/locally-resource/images/banner-02.png" />
+  </swiper-item>
+</swiper>
+<!-- 九宫格 -->
+<view class='grids'>
+  <view class='item'>
+    <image src="/locally-resource/icons/grid-01.png" />
+    <text>美食</text>
+  </view>
+  <view class='item'>
+    <image src="/locally-resource/icons/grid-02.png" />
+    <text>美食</text>
+  </view>
+  <view class='item'>
+    <image src="/locally-resource/icons/grid-03.png" />
+    <text>美食</text>
+  </view>
+  <view class='item'>
+    <image src="/locally-resource/icons/grid-04.png" />
+    <text>美食</text>
+  </view>
+  <view class='item'>
+    <image src="/locally-resource/icons/grid-05.png" />
+    <text>美食</text>
+  </view>
+  <view class='item'>
+    <image src="/locally-resource/icons/grid-06.png" />
+    <text>美食</text>
+  </view>
+  <view class='item'>
+    <image src="/locally-resource/icons/grid-07.png" />
+    <text>美食</text>
+  </view>
+  <view class='item'>
+    <image src="/locally-resource/icons/grid-08.png" />
+    <text>美食</text>
+  </view>
+  <view class='item'>
+    <image src="/locally-resource/icons/grid-09.png" />
+    <text>美食</text>
+  </view>
+</view>
+<!-- 商家推荐 -->
+<view class='links'>
+  <image src="/locally-resource/images/link-01.png" />
+  <image src="/locally-resource/images/link-02.png" />
+</view>

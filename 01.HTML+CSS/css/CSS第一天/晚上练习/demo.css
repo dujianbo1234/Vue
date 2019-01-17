@@ -1,0 +1,46 @@
+		body {
+			font-size: 14px;
+			font-family: "微软雅黑";
+		}
+
+		.title {
+			font-size: 28px;
+			font-weight: normal;
+			font-family: "微软雅黑";
+		}
+
+		.time {
+			color: #AABBCC;
+		}
+		
+		.pinglun {
+			color: #990000;
+		}
+		
+		em {
+			color: #3399CC;
+			font-style: normal;
+		}
+		
+		.cx {
+			color: red;
+		}
+
+		.cs {
+			color: green;
+			font-weight: 700;
+		}
+		.subtitle {
+			text-align: center;
+		}
+
+		p {
+			text-indent: 2em;
+			/*首行缩进2字符*/
+			line-height: 28px;
+			/*字符行距28px*/
+		}
+
+		a {
+			text-decoration:none;
+		}

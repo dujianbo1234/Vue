@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	1.选择器
+		标签选择器	div{}
+		类选择器	.one{} class="one"
+		id选择器	#two{} id="two"
+		通配符选择器  *{}
+
+
+	2.字体相关属性
+		字体大小 font-size
+		字体样式 font-style: normal italic;
+		字体粗细 font-weight: normal(400)  bold(700)
+		字体	 font-family:"微软雅黑";
+
+		字体复合属性:  font: 倾斜 加粗 大小/行高 字体;
+
+		注意:复合属性容易出现覆盖问题(没有写的会表示清除)
+
+		颜色: color:red;
+
+		行高: line-height:高;	调整文字在垂直方向的距离
+
+		文本缩进:	text-indent:2em;
+
+		文本下划线: text-decoration: none;(去掉下划线)
+		underline(添加下划线)
+
+		文本水平对齐: text-align:center; left right
+
+	------------------------------------------------------------------------------------------------------------------
+	0.行高
+		行高的作用:调整文字在垂直方向的距离.
+		行高的计算机:行高=字高度+行间距(上+下).
+		行高的使用技巧:行高等于高,可以让蚊子垂直方向居中.
+	1.复合选择器
+		后代选择器
+			.one a{}
+		子代选择器
+			.one > a{}
+		并集选择器
+			h1,span,a,.one, .one a{}
+		交际选择器
+			p.one{}
+		伪类选择器
+			a:hover{} 鼠标移入的效果
+
+	2.元素模式
+		现实世界中的天生阶段:
+			富人:很多房子+很多存款
+			穷人:没有房子+没存款
+			中产阶级:有房子+一定的现金流(100万)
+
+			阶级是可以通过后天改变:自己的努力
+
+		元素模式的衡量标准:
+			是否有宽高(有房子)
+			是否独占一行(有钱人横着走)
+
+
+		块级元素:富人(2者都有) div h1 p ul li
+		行内元素:穷人(0 都没有) span a
+		行内块元素:中产阶级(1,有一个) input img
+
+		如果判断元素标签的显示模式
+			1.写两个标签
+			2.给宽高背景色
+			3.观察,根据现象得出结论
+
+		实际工作中,我们经常需要将块元素和行内元素转换成行内块,
+		转换方法:
+			display:block; 块级元素
+					inline; 行内元素
+					inline-block; 行内块元素
+
+	3.背景属性
+		背景颜色 background-color
+		背景图片 background-image:rul();
+		背景平铺 background-repeat:no-repeat; repeat-x	repeat-y
+		背景位置 background-position:X轴  Y轴
+									 100px 100px;
+									 left	center;
+									 left  100px;
+				注意: 方位名次没有顺序要求,如果只有一个方位,另外一边默认居中.
+		背景固定 background-attachment:fixed;
+		背景尺寸 background-size: 宽  高;
+
+		背景复合属性: background:url() no-repeat 0 0 red;
+
+	4.css三大特性:
+		层叠性:
+		继承性:
+		权重优先级:
+</body>
+</html>

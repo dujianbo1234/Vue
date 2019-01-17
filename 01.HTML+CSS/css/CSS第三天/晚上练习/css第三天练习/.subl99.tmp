@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: right;
+		}
+		.one{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			float:left;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">1</div>
+	<div class="one">2</div>
+</body>
+</html>

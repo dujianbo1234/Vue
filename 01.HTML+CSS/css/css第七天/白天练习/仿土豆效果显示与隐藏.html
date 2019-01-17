@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仿土豆效果显示与隐藏</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			width: 220px;
+			height: 220px;
+			margin: 200px auto 0;
+			position: relative;
+		}
+
+	/*	.box img {
+			position: relative;
+		}*/
+
+		.box2 {
+			display: none;
+			width: 220px;
+			height: 220px;
+			background: rgba(0,0,0,0.1)  url(arr.png)  no-repeat  center  center;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			margin-left: -110px;
+		}
+
+		.box a:hover .box2 {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<a href="#">
+			<img src="2.jpg" alt="">
+			<div class="box2"></div>
+		</a>
+	</div>
+</body>
+</html>

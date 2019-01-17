@@ -1,0 +1,246 @@
+.header {
+	height: 28px;
+	background-color: #009B73;
+}
+
+.register {
+	float: right;
+}
+
+.register li {
+	float: left;
+	border-left: 1px solid #46B389;
+}
+
+.register a {
+	display: block;
+	line-height: 28px;
+	margin:0 20px;
+	color: #fff;
+	font-size: 14px;
+}
+
+
+.tit {
+	height: 78px;
+	background-color: #fff;
+}
+
+.titw {
+	padding: 34px 0 25px;
+}
+.logo {
+	float: left;
+}
+
+.nav {
+	float: right;
+}
+
+.nav li {
+	float: left;
+	margin: 0 15px;		
+}
+
+.nav li a {
+	display: block;
+	padding: 0 5px;
+	font-size: 16px;
+	color: #7A7B75;
+	text-decoration: none;
+}
+
+.nav li a:hover {
+	border-bottom: 2px solid #009B73;
+	color: #393939;
+}
+/*title部分完*/
+/*pro产品部分*/
+.box a {
+	height: 52px;
+	line-height: 52px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #777B7E;
+}
+
+.pro {
+	height: 738px;
+}
+
+.pro .pro-l {
+	float: left;
+	width: 770px;
+	height: 738px;
+}
+
+.pro .pro-l-h {
+	width: 770px;
+	height: 364px;
+}
+
+.pro .pro-l-b {
+	width: 770px;
+	height: 364px;
+	margin-top: 10px;
+}
+
+.pro .pro-r {
+	float: left;
+	width: 396px;
+	height: 738px;
+	margin-left: 10px;
+}
+/*pro产品部分完*/
+/*产品系列*/
+.box-2 {
+	position: relative;
+	height: 103px;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+.box-2 h2 {
+	position: absolute;
+	width: 226px;
+	height: 30px;
+	left: 50%;
+	top: 88px;
+	margin-left: -113px;
+	text-align: center;
+	background-color: #F7F7F7;
+	font-weight: normal;
+}
+
+.R {
+	height: 433px;
+}
+
+.R-mei {
+	height: 30px;
+	padding-top: 40px;
+}
+
+.R-mei h4 {
+	float: left;
+	color: #1E1F23;
+	font-weight: normal;
+}
+
+.R-mei p {
+	float: left;
+	margin-left: 25px;
+	color: #767A79;
+}
+
+.R-img {
+	height: 363px;	
+}
+
+.R-img li {
+	float: left;
+	width: 286px;
+	height: 363px;
+	margin-right: 10px;
+	background-color: #fff;
+}
+
+.R-img img {
+	width: 150px;
+	height: 180px;
+	margin: 60px 68px 38px;
+}
+
+.R-img li a {
+	text-align: center;
+}
+
+.R-img li h5 {
+	font-size: 16px;
+	color: #131313;
+}
+
+.R-img li p {
+	font-size: 12px;
+	color: #A0A0A0;
+}
+/*产品特点*/
+.char {
+	height: 301px;
+	margin-top: 40px;
+}
+
+.char img {
+	float: left;
+	width: 580px;
+	height: 300px;
+}
+
+.char .char-r {
+	margin-left: 10px;
+}
+/*产品系列完*/
+.footer {
+	margin-top: 175px;
+	height: 300px;
+}
+.footer-l dl {
+	float: left;
+	margin-right: 160px;
+}
+.footer-l dl dt {
+	height: 44px;
+	font-size: 14px;
+	font-weight:700; 
+
+}
+.footer-l dl dd {
+	height: 30px;
+	font-size: 12px;
+}
+
+.footer-l dd a {
+	color: #3B3535;
+}
+
+.footer-r {
+	width: 209px;
+	float: right;
+}
+.footer-r .ico {
+	margin-left: 20px;
+	width: 183px;
+	height: 47px;
+}
+.footer-r h3 {
+	font-size: 28px;
+	font-weight: normal;
+	margin-top: 30px;
+}
+.footer-r p {
+	font-size: 14px;
+	margin-left: 30px;
+}
+.foot-in {
+	height: 180px;
+	border-bottom:1px solid #ccc; 
+}
+.foot-inn {
+	margin-top: 33px;
+	color: #ccc;
+	font-size: 12px;
+}
+.foot-inn-l img,
+.foot-inn-r img {
+	vertical-align: middle;
+}
+
+.foot-inn-l {
+	position: relative;
+	width: 530px;
+}
+
+.foot-inn-r {
+	position: absolute;
+	right: -646px;
+	top: -3px;
+}

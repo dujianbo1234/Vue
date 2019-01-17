@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css复习</title>
+</head>
+<body>
+	1.复习
+		列表
+			ul li
+			ol li
+			dl dt dd
+
+		表格
+			tabel tr td
+			th caption
+			thead tbody
+
+			width
+			height
+			border
+			cellspacing
+			cellpadding
+			align
+
+			rowspan
+			colspan
+
+		表单
+			表单元素
+				<input type="text">
+				<input type="password">
+				<input type="submit">
+				<input type="reset">
+				<input type="button" value="">
+				<input type="image" src="">
+				<input type="file">
+				<!-- 单选 -->
+				<input type="radio" name="sex">
+				<!-- 多选 -->
+				<input type="checkbox" checked>
+				
+				<!-- 下拉菜单 -->
+				<select>
+					<option value="" selected>武汉</option>
+				</select>
+
+				<!-- 表单输入框 -->
+				<textarea></textarea>
+
+				<label>直接包裹文字和表单即可</label>
+
+			提示文本:普通的文字
+
+			表单域:
+				<form action="提交地址" method="get/post" name=""></form>
+
+	2.今日知识点
+		0.css中的两大知识体系
+			找标签(选择器) 改样式(css样式属性)
+		1.css的三种书写方式(1种不推荐用,1种平时用,1种做项目时候用)
+			行内样式
+			内嵌样式
+			外链样式
+
+		2.选择器
+			标签选择器
+				标签{}
+				div{}
+				p{}
+
+			类选择器
+				.one{}  class="one"
+
+				注意:一个标签上可以有多个类名,中间空格隔开.
+			
+			id选择器
+				#two {}	   id="two"
+			
+			通配符选择器:选择所有标签(清除默认距离)
+				*{
+					margin:0;
+					padding:0;
+				}
+
+		3.字体相关属性
+			字体大小 font-size(浏览默认字体大小16 最小字体12,一般14即可)
+			字体粗细 font-weight
+			字体样式 font-style
+			字体	 font-family
+			颜色	 color
+
+			字体复合属性(连写):
+				font:字体样式 字体粗细 字体大小 字体;
+				font:12px/1.5 "微软雅黑"
+				注意:
+					1.font复合属性有严格的顺序要求
+					2.必须存在字体大小和字体两个属性
+				建议大家知道,但是我们自己不写.
+
+			字体的几种写法:
+				中文:"微软雅黑"
+				中文拼音:microsoft yahei
+				英文字体:airal
+				编码格式:unicode编码
+
+				注意:只有一个单词的字体才可以不加引号,其他的都需要加引号,逗号隔开.
+
+		4.其他小知识点
+			行高 line-height
+			首行缩进 text-indent:em;	缩进2个字
+			文本装饰 text-decoration:none;	取消下划线		underline添加下划线
+
+			颜色的表示方式:color:
+				1.颜色单词(red blue orange green yellow skybule darkred)
+				2.十六进制(#红绿蓝 00 00 00 ) #000000:黑色  #ffffff:白色   #ff0000;  #000;  #fff
+				3.rgb表示法 rgb(0,0,0)  (0-255)  rgb(255,255,255);
+				4.rgba表示  rgba(0,0,0,0.1-1);
+	
+	1.复习
+		列表
+			ul li
+			ol li
+			dl dt dd
+
+		表格
+			tabel tr td
+			th caption
+			thead tbody
+
+			width
+			height
+			border
+			cellspacing
+			cellpadding
+			align
+
+			rowspan
+			colspan
+
+		表单
+			表单元素
+				<input type="text">
+				<input type="password">
+				<input type="submit">
+				<input type="reset">
+				<input type="button" value="">
+				<input type="image" src="">
+				<input type="file">
+				<input type="raido" name="sex">
+				<input type="checkbox" checked>
+
+				<select>
+					<option value="" selected>武汉</option>
+				</select>
+
+				<textarea></textarea>
+
+				<label>直接包裹文字和表单即可</label>
+			
+			提示文本:普通的文字
+
+			表单域:
+				<form action="提交地址" method="get/post" name=""></form>
+
+	2.今日知识点
+		0.css中的两大知识体系:
+			找标签(选择器)	改样式(css样式属性)
+		1.css的三种书写方式(1种不推荐用,1种平时用,1用做项目时候用)
+			行内样式
+			内嵌样式
+			外链样式
+		2.选择器
+			标签选择器
+				标签{}
+				div{}
+				p{}
+
+			类选择器
+				.one{} class="one"
+
+				注意:一个标签上可以有多个类名,中间空格隔开.
+
+			id选择器
+				#two{} id="two"
+
+			通配符选择器:选择所有标签(清除默认距离)
+				*{
+					margin:0;
+					padding:0;
+				}
+
+		3.字体相关属性
+			字体大小 font-size(浏览器默认字体大小16	最小字体12	一般14即可)
+			字体粗细 font-weight
+			字体样式 font-style
+			字体	 font-family
+			颜色	 color
+
+			字体复合属性:
+				font:字体样式 字体粗细 字体大小 字体;
+
+				font:12px/1.5 "微软雅黑";
+				注意:
+					1.font复合属性有严格的顺序要求
+					2.必须存在字体大小和字体两个属性
+				建议大家知道,但是我们自己不写.
+
+			字体的几种写法:
+				中文:"微软雅黑"
+				中文拼音:microsoft yahei
+				英文字体:airal
+				编码格式:unicode编码
+
+				注意:只有一个单词的字体才可以不加引号,其他的都需要加引号,逗号隔开.
+		4.其他小知识点
+			行高 line-height
+			首行缩进	text-indent:2em;	缩进2个字
+			文本装饰	text-decoration:none;	取消下划线	underline添加下划线
+
+			颜色的表示方式:color:
+				1.颜色单词(red blue orange green yellow skyblue darkred)
+				2.十六进制(#红绿蓝 00 00 00 )	#000000:黑色	#ffffff:白色	#ff0000;	#000;	#fff;
+				3.rgb表示法	rgb(0,0,0)	(0-255)  rgb(255,255,255);
+				4.rgba表示	rgba(0,0,0,0.1-1);
+
+	1.复习
+		列表
+			ul li
+			ol li
+			dl dt dd
+
+		表格
+			tabel tr td
+			th caption
+			thead tbody
+
+			width
+			height
+			border
+			cellspacing
+			cellpadding
+			align
+
+			rowspan
+			colspan
+
+		表单
+			表单元素
+				<input type="text">
+				<input type="password">
+				<input type="submit">
+				<input type="reset">
+				<input type="button" value="">
+				<input type="image" src="">
+				<input type="file">
+				<input type="radio" name="sex">
+				<input type="checkbox" checked>
+
+				<select>
+					<option value="" selected>武汉</option>
+				</select>
+
+				<textarea></textarea>
+
+				<label>直接包裹文字和表单即可</label>
+
+			提示文本:普通的文字
+
+			表单域:
+				<form action="提交地址" method="get/post"></form>
+
+	2.今日知识点
+		0.css中的两大知识体系
+			找标签(选择器) 改样式(css样式属性)
+
+		1.css的三种书写方式(1种不推荐用,1种平时用,1种做项目时候用)
+			行内样式
+			内嵌样式
+			外链样式
+
+		2.选择器
+			标签选择器
+				标签{}
+				div{}
+				p{}
+
+			类选择器
+				.one{} class="one"
+
+				注意:一个标签上可以有多个类名,中间空格隔开.
+
+			id选择器
+				#two {} 	id="two"
+
+			通配符选择器:选择所有标签(清除默认距离)
+				*{
+					margin:0;
+					padding:0;
+				}
+
+		3.字体相关属性
+			字体大小	font-size(浏览默认字体大小16	最小字体12	一般14即可)
+			字体粗细	font-weight
+			字体样式	font-style
+			字体		font-family
+			颜色		color
+
+			字体复合属性:
+				font:字体样式 字体粗细 字体大小 字体;
+				font:12px/1.5 "微软雅黑";
+				注意:
+					1.font复合属性有严格的顺序要求
+					2.必须存在字体大小和字体两个属性
+				建议大家知道,但是我们自己不写.
+
+			字体的几种写法:
+				中文:"微软雅黑"
+				中文拼音:microsoft yahei
+				英文字体:airal
+				编码格式:unicode编码
+
+				注意:只有一个单词的字体才可以不加引号,其他的都需要加引号,逗号隔开.
+
+		4.其他小知识点
+			行高	line-height
+			首行缩进	text-indent:em; 缩进2个字
+			文本装饰	text-decoration:none; 取消下划线	underline添加下划线
+			颜色的表示方式:color
+				1.颜色单词(red blue orange green yellow skybule darkred)
+				2.十六进制(#红绿蓝 00 00 00 )#000000:黑色	#ffffff:白色	#ff0000;	#000;	#fff;
+				3.rgb表示法	rgb(0,0,0) (0-255) rgb(255,255,255);
+				4.rgba表示	rgba(0,0,0,0.1-1)
+
+	1.复习
+		列表
+			ul li
+			ol li
+			dl dt dd
+
+		表格
+			tabel tr td
+			th caption
+			thead tbody
+
+			width
+			height
+			border
+			cellspacing
+			cellpadding
+			align
+
+			rowspan
+			colspan
+
+		表单
+			表单元素
+				<input type="text">
+				<input type="password">
+				<input type="submit">
+				<input type="reset">
+				<input type="button" value="">
+				<input type="image" src="">
+				<input type="file">
+				<input type="raido" name="sex">
+				<input type="checkbox" checked>
+
+				<select>
+					<option value="" selected>武汉</option>
+				</select>
+
+				<textarea></textarea>
+
+				<label>直接包裹文字和表单即可</label>
+
+			提示文本:普通的文字
+
+			表单域:
+				<form action="提交地址" method="get/post" name=""></form>
+
+	2.今日知识点
+		0.css中的两大知识体系:
+			找标签(选择器) 改样式(css样式属性)
+</body>
+</html>

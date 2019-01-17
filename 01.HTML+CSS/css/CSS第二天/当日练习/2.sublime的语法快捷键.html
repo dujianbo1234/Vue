@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			text-align: center;
+			text-decoration: none;
+			color: red;
+			width: 100px;
+			height: 100px;
+			text-indent: 2em;
+			background-color: red;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+
+	快速生成标签 任意标签+tab键  div p
+	<div></div>
+	<p></p>
+
+	同时生成多个标签  *表示乘法,生成多个
+	<!-- div*3 -->
+	<div></div>
+	<div></div>
+	<div></div>
+
+	生成标签内容 {}  
+	<!-- div{我是标签的内容} -->
+	<div>我是标签的内容</div>
+
+	随机编号 $  要配合乘法使用
+	<!-- div{我是盒子$}*5 -->
+	<div>我是盒子1</div>
+	<div>我是盒子2</div>
+	<div>我是盒子3</div>
+	<div>我是盒子4</div>
+	<div>我是盒子5</div>
+
+	生成属性[]  
+	<!-- a[target="_blank"] -->
+	<!-- img[width="100"] -->
+	<img src="" alt="" width="100">
+
+	生成多个子标签  >
+	<!-- ul>li*3 -->
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+
+	生成并列标签 +
+	<!-- div+span -->
+	<div></div>
+	<span></span>
+
+	快速生成类名 . (默认标签div)
+	<!-- .one -->
+	<!-- p.one -->
+	<div class="one"></div>
+	<p class="one"></p>
+
+	快速生成id #
+	<!-- #two -->
+	<div id="two"></div>
+
+	<!-- p#two -->
+	<p id="two"></p>
+
+
+	<!-- div.one>ul>li*4>a[href="http://www.baidu.com"]{我是链接$}+span{删除} -->
+	<div class="one">
+		<ul>
+			<li><a href="http://www.baidu.com">我是链接1</a><span>删除</span></li>
+			<li><a href="http://www.baidu.com">我是链接2</a><span>删除</span></li>
+			<li><a href="http://www.baidu.com">我是链接3</a><span>删除</span></li>
+			<li><a href="http://www.baidu.com">我是链接4</a><span>删除</span></li>
+		</ul>
+	</div>
+
+</body>
+</html>

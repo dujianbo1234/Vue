@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	1.三大特性
+		层叠性: 相同样式覆盖,不同样式叠加,就近原则
+		继承性: 子元素可以直接获得父元素的某些属性(字体相关属性, color, text-align, line-height)
+		权重优先级: 不同样式作用在同一标签上,权重大的优先显示.
+			标签选择器 < 类选择器 < id选择器 < 行内样式 < !important
+
+	2.盒子模型
+		border  边框  (会撑大盒子,边框不测量)
+		margin  外边距(合并和塌陷问题)
+		padding 内边距(会撑大盒子,减去)
+
+
+	3.居中问题
+		块级元素居中:  margin:0 auto;  外边距上下0 左右auto(必须有宽度)
+		行内元素和行内块元素居中: 给父元素加text-align:center;
+
+		文本垂直方向居中: line-height:高度
+
+		背景图居中: background-position:center center;
+
+
+	<div style="color:red"></div>
+</body>
+</html>

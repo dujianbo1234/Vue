@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			border:1px solid red;
+			padding: 10px 20px 30px 40px;
+			/*border-top: 1px solid red;*/
+		}
+	</style>
+</head>
+<body>
+	<!-- 2.盒子模型(border padding margin)
+
+		border 边框
+		border:1px solid red;
+		边框线条类型: solid 实线
+					  dotted 点线
+					  dashed 虚线
+		border-top: 1px solid red;
+		border-bottom
+		border-left
+		border-right
+		border-collapse:collapse;细线表格
+
+		内边距:可以实现盒子内的距离调整
+		padding-top:10px; 上内边距10px
+		padding-right:10px; 右内边距10px
+		padding-bottom:10px; 下内边距10px
+		padding-left:10px; 左内边距10px
+
+		padding:20px 上下左右内边距都是20px
+		padding:10px 20px 上下10 左右20
+		padding:10px 20px 30px 40px; 上10 右20 下30 左40(顺时针:上右下左)
+
+		padding:10px 30px 50px; 上10 左右30 下50 -->
+
+		外边距:可以实现盒子与盒子之间的距离
+		margin-top:10px;上外边距10px
+
+		margin:100px auto 0;  上100px 左右居中 下0
+
+
+	3.盒子模型的问题
+		1.盒子在页面中是实际大小: 宽高+padding+border
+
+		2.padding会撑大盒子,导致设计标准和标准不一样,需要减去撑大的值.(有width属性的盒子才会被撑大)
+
+		3.行内元素的	上下 内外边距无效:	margin-top margin-bottom padding-top padding-bottom
+
+
+	4.居中问题
+
+		块级元素居中: margin: 0 auto;(必备条件必须有宽,左右auto)
+		行内元素或行内块元素或文字居中: text-align:center;(必须给父元素)
+	<div>无敌风火轮</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!-- 对于频繁需要被切换显示的元素 不应该使用 wx:if -->
+<view hidden='{{!isLoading}}'>
+  <text>loading...</text>
+</view>
+<!-- <view wx:elif=""></view> -->
+<view hidden='{{isLoading}}'>
+  <text>load done</text>
+</view>
+
+
+<view>
+  <!-- block 只是一个包装元素,不会对界面的结构造成任何影响 -->
+  <block wx:if="{{isLoading}}">
+    <text>hello</text>
+    <text>world</text>
+  </block>
+  <text>不要隐藏我</text>
+</view>

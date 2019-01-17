@@ -1,0 +1,24 @@
+/* 1.混入 */
+.active {
+  width: 20px;
+  color: 20px;
+  width: 21px;
+}
+/* 2.区分 */
+.active3 {
+  color: 20px;
+  width: 22px;
+}
+/* 3.嵌套 */
+.div1 {
+  width: 20px;
+}
+.div1 .div2 {
+  width: 50px;
+}
+.div1 .div2 > ul {
+  background: red;
+}
+.div1 .div2 > ul .li {
+  background-color: #ccc;
+}

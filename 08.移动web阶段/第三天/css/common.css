@@ -1,0 +1,11 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+.left_box li.active > a {
+    border-right: none;
+    border-bottom: none;
+    background-color: #fff;
+    color: red;
+}

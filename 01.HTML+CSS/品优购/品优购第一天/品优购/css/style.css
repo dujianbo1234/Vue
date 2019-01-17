@@ -1,0 +1,199 @@
+.shortcut {
+	/*width: 100%;*/
+	height: 25px;
+	background-color: #F1F1F1;
+}
+
+.shortcut .shortcut-l li {
+	float: left;
+	line-height: 25px;
+	padding-right: 15px;
+}
+
+.shortcut .shortcut-r {
+	float: right;
+	line-height: 25px;
+}
+
+.shortcut .shortcut-r li {
+	float: left;
+	color: #616161;
+}
+
+.shortcut .shortcut-r .spacer {
+	width: 1px;
+	height: 12px;
+	background-color: #616161;
+	margin: 7px 15px 0;
+}
+
+.icomoon {
+	font-family: 'icomoon';
+}
+
+.header {
+	position: relative;
+	height: 105px;
+/*	background-color: #ccc;*/
+
+}
+
+.header .logo {
+	position: absolute;
+	left: 0;
+	top: 25px;
+	width: 175px;
+	height: 56px;
+} 
+
+.header h1 a {
+	display: block;
+	width: 175px;
+	height: 56px;
+	font-size: 0;
+	background: url(../img/logo.png) no-repeat;
+}
+
+.header .search {
+	position: absolute;
+	left:  347px;
+	top: 25px;
+	width: 538px;
+	height: 36px;
+}
+
+.header input {
+	float: left;
+	width: 439px;
+	height: 32px;
+	border: 2px solid #AF191B;
+	outline: none;
+	/*让文本框外面的圈消失*/
+	padding-left: 15px;
+	color: #646464;
+}
+
+.header button {
+	float: left;
+	width: 80px;
+	height: 36px;
+	background-color: #B2191B;
+	color: #fff;
+	border: 0;
+	font-size: 18px;
+}
+
+.header .hotwrods {
+	position: absolute;
+	left: 347px;
+	top: 69px;
+}
+
+.hotwrods a {
+	float: left;
+	margin:0 12px;
+}
+
+.header .shopcar {
+	position: absolute;
+	right: 63px;
+	top: 25px;
+/*	width:138px; 
+	height:34px;*/
+	/*line-height: 34px;*/
+	background-color: #F7F7F7;
+	border: 1px solid #DFDFDF;
+}
+
+.header .shopcar i {
+	margin:0 10px;
+}
+
+.header .shopcar a {
+	float: left;
+	font-size: 14px;
+	width:138px; 
+	height:34px;
+	line-height: 34px;
+	text-align: center;
+}
+
+.header .count {
+	position: absolute;
+	left: 99px;
+	top: -8px;
+	height: 14px;
+	line-height: 14px;
+	color: #fff;
+	padding:0 3px;
+	border-radius: 7px 7px 7px 0;
+	background-color: red;
+}
+
+.nav {
+	height: 45px;
+	border-bottom: 2px solid #B3181C;
+}
+
+.nav .dropdown {
+	width: 209px;
+	height: 45px;
+}
+
+.nav .dropdown .dt {
+	/*width: 100%;*/
+	height: 100%;
+	background-color: #B2191B;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 45px;
+}
+
+.nav .dropdown .dd {
+	height: 456px;
+	/*width: 209px;*/
+	margin-top: 2px;
+	background-color: #C81622;
+}
+
+.nav .dd .menu_item {
+	float: left;
+	width: 209px;
+	height: 31px;
+	font-size: 14px;
+/*	padding:9px 10px 0;*/
+}
+
+.nav .dd a {
+	float: left;
+	margin-left: 10px;
+	/*width: 209px;*/
+	height: 31px;
+	color: #fff;
+}
+
+.nav .dropdown .dd .menu_item:hover {
+	color: #BE191D;
+	background-color:#fff;
+}
+
+.nav .dd i {
+	float: right;
+	margin-right: 10px;
+	color: #fff;
+}
+
+.nav .navitems {
+	width: 900px;
+	height:45px;
+	margin-left: 16px;
+/*	background-color: blue;*/
+}
+
+.nav .navitems a {
+	float: left;
+	padding: 0 25px;
+	font-size: 18px;
+	line-height: 45px;
+}

@@ -1,0 +1,91 @@
+html,body {
+    width: 100%;
+    height: 100%;
+}
+.frame {
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    height: 100%;
+    margin: 0 auto;
+}
+/* 背景图 */
+.frame .banner {
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+}
+.frame .banner > img {
+    width: 100%;
+    display: block;
+}
+/* 音乐小图标 */
+.frame .banner .music {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: url(../images/music_03.png) no-repeat;
+    background-size: 30px 30px;
+}
+/* 搜索按钮 */
+.frame .banner .nav {
+    width: 100%;
+    height: 70px;
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+.frame .banner .nav > a {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.frame .banner .nav > a:nth-child(1) {
+    background: url(../images/search.png) no-repeat;
+    background-position: 80% 50%;
+}
+.frame .banner .nav > a:nth-child(2) {
+    background: url(../images/liuyan.png) no-repeat;
+    background-position: 20% 50%;
+}
+/* 内容展示部分 */
+.content {
+    width: 100%;
+    background-color: #eee;
+}
+.content .movie {
+    width: 100%;
+}
+.content .movie > ul {
+    width: 100%;
+}
+.content .movie > ul > li {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding: 10px 5px;
+}
+.content .movie > ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid red;
+    padding: 10px 2px;
+}
+.content .movie > ul > li > a > h4{
+    color: black;
+}
+.content .movie > ul > li > a > p {
+    font-size: 14px;
+    color: black;
+}
+.content .movie > ul > li > a >img {
+    width: 100%;
+    height: 100%;
+}

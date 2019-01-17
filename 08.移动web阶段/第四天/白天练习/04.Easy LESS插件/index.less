@@ -1,0 +1,37 @@
+@aa: 20px;
+@r: red;
+@y: yellow;
+@c: #ccc;
+
+/* 1.混入 */
+.div (){
+    color: @aa;
+    width: @aa;
+}
+.active {
+    .div;
+}
+
+/* 2.区分 */
+.div(@ww:21px){
+    color: @aa;
+    width: @ww;
+}
+.active3{
+    .div(22px);
+}
+
+
+/* 3.嵌套 */
+.div1 {
+    width: @aa;  
+    .div2 {
+        width:50px;
+        >ul {
+            background: @r;
+            .li {
+                background-color: @c;
+            } 
+        }
+    }
+}

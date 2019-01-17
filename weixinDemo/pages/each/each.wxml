@@ -1,0 +1,6 @@
+<!--pages/each/each.wxml-->
+<view wx:for="{{students}}" wx:for-item="s" wx:for-index="i" wx:key="aaa">
+  <text>{{i}} </text>
+  <text>name: {{s.name}} </text>
+  <text>age: {{s.age}} </text>
+</view>

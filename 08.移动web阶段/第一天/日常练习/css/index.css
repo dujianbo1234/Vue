@@ -1,0 +1,184 @@
+.jd_layout {
+    width: 100%;
+    /*最大宽度*/
+    max-width: 640px;
+    /*最小宽度*/
+    min-width: 320px;
+    margin:0 auto;
+    height: 1000px;
+    background-color: #eeeeee;
+}
+/* jd_header开始 */
+.jd_header {
+    width: 100%;
+    max-width: 640px;
+    height: 40px;
+    /*固定在顶部*/
+    position: fixed;
+    background: rgba(233, 35, 34, 1);
+    z-index: 999;
+}
+/* logo */
+.jd_header .logo {
+    width: 56px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    background: url("../images/jd-sprites.png");
+    /*设置背景大小*/
+    background-size: 200px 200px;
+    background-position: 0px -105px;
+}
+/* 登录标签*/
+.jd_header .enter {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height:40px;
+}
+/* 表单盒子 */
+.jd_searchBox{
+    width: 100%;
+    height: 100%;
+    padding-left:76px;
+    padding-right:50px;
+}
+/* 搜索栏 */
+.jd_searchBox > input{
+    width: 100%;
+    height: 30px;
+    margin-top:5px;
+    border-radius: 15px;
+    padding-left:30px;
+    color: #666;
+}
+/* 放大镜 */
+.jd_searchBox::before {
+    content: "";
+    width: 27px;
+    height: 23px;
+    position: absolute;
+    background: url(../images/jd-sprites.png);
+    background-size: 200px 200px;
+    background-position: -56px -108px;
+    left: 80px;
+    top: 9px;
+}
+/* jd_header结束 */
+/* jd_banner开始 */
+.jd_banner {
+    width: 100%;
+    /* overflow: hidden; */
+    position: relative;
+}
+.jd_banner .images {
+    /* 八张图片  */
+    width: 800%;
+    position: relative;
+}
+.jd_banner .images li {
+    /* 每张图片占ul宽的12.5% */
+    width: 12.5%;
+    float: left;
+}
+.jd_banner .images li img {
+    display: block;
+    width: 100%;
+}
+/* 小圆点 */
+.dot {
+    /* width: 150px; */
+    /* height: 15px; */
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%);
+    /* background-color: black; */
+}
+.dot > li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+/* jd_banner结束 */
+/* jd_nav开始 */
+.jd_nav {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+}
+.jd_nav > ul > li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 10px;
+}
+.jd_nav > ul > li >img {
+    width: 39px;
+}
+/* jd_nav结束 */
+/* jd_main开始 */
+.jd_main {
+    width: 100%;
+    padding: 10px 0 0 0 ;
+}
+.jd_main .seckill {
+    background-color: #fff;
+}
+.jd_main .seckill_hd {
+    width: 100%;
+    height: 20px;
+}
+.jd_main .seckill_hd .jd_icon {
+    background: url(../images/seckill-icon.png);
+    background-size: 16px;
+    width: 16px;
+    height: 20px;
+    margin: 3px 10px 0 0;
+}
+.jd_main .seckill_hd .seckill_hd_l > .h3{
+    color: #e92322;
+    margin-top: 3px;
+}
+.jd_main .seckill_hd .h3 {
+    margin: 0 10px 0 0;
+    font-weight:normal;
+}
+/* 计时器 */
+.jd_main .seckill_hd .jd_time {
+    margin-top: 3px;
+}
+.jd_main .seckill_hd .jd_time > span{
+    display: inline-block;
+    width: 13px;
+    height: 18px;
+    background-color: black;
+    color: #fff;
+    line-height: 18px;
+    text-align: center;
+}
+.jd_main .seckill_hd .jd_time > span:nth-of-type(3n) {
+    background-color: #fff;
+    color: black;
+}
+.jd_main .seckill_bd {
+    padding: 20px;
+}
+.jd_main .seckill_bd > ul {
+    width: 100%;
+}
+.jd_main .seckill_bd > ul > li {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.jd_main .seckill_bd > ul > li > img{
+    width: 60%;
+    display: inline-block;
+}

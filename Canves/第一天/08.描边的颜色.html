@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #cas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="400" id="cas"></canvas>
+    <script>
+        var cas = document.getElementById('cas');
+        var ctx = cas.getContext('2d');
+
+        for(var i=0;i<=255;i++){
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgb(' + 0 + ',' + i + ',' + 0 + ')';
+            ctx.moveTo(50 + i,50);
+            ctx.lineTo(50 + i,250);
+            ctx.stroke();
+        }
+    </script>
+</body>
+
+</html>

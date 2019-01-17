@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+
+<!-- wxs 标签 类似于 html 中的 script 标签,可以定义一些行内脚本 -->
+<wxs module="foo">
+  // 这里可以到处一个对象,这个对象可以直接在界面上使用
+  // 这里的代码必须遵循 commonjs 规范
+  module.exports = {
+    addPostfox: function(input) {
+      return input + ' wxs '
+    }
+  }
+</wxs>
+
+<view>
+  
+</view>

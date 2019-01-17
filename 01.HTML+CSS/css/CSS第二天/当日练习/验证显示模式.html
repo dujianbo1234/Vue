@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			/*display: inline-block;转换成行内块元素*/
+			display: inline-block;
+		}
+
+		span {
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			display: inline-block;
+
+		}
+
+		input {
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div>块级元素1</div>
+	<div>块级元素2</div>
+	<!-- 有宽高,独占一行 -->
+	<span>行内元素1</span>
+	<span>行内元素2</span>
+	<!-- 无宽高,不独占一行 -->
+	<input type="text" value="行内块元素1">
+	<input type="text" value="行内块元素2">
+	<!-- 有宽高,不独占一行 -->
+
+</body>
+</html>

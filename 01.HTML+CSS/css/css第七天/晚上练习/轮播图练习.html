@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图练习2</title>
+	<style>
+		* {
+			margin: 0
+			padding: 0;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		.box {
+			position: relative;
+			width: 1226px;
+			height: 460px;
+			border: 1px solid red;
+			margin: 100px auto;
+		}
+
+		.box img {
+			height: 460px;
+			width: 1226px;
+		}
+
+		.box span {
+			position: absolute;
+			width: 40px;
+			height: 70px;
+			background-color: rgba(0,0,0,0.3);
+			top: 50%;
+			margin-top: -35px;
+		}
+
+		.box .arrowl {
+			left: 0;
+		}
+
+		.box .arrowr {
+			right: 0;
+		}
+
+		.box ol {
+			position: absolute;
+			/*width: 100px;
+			height: 20px;*/
+			background-color: rgba(0,0,0,0.3);
+			left: 50%;
+			bottom: 10px;
+			margin-left: -72px;
+			border-radius:8px;
+			padding: 0 10px;
+		}
+
+		.box li {
+			float: left;
+		}
+
+		.box li a {
+			float: left;
+			width: 15px;
+			height: 15px;
+			font-size: 12px;
+			color: #fff;
+			line-height: 15px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: rgba(0,0,0,0.8);
+			margin:5px;
+		}
+
+		.box .flash {
+			background-color: #fff;
+			color: rgb(0,0,0);
+		}
+
+		.box li a:hover {
+			background-color:rgba(0,0,0,0.3)
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../白天练习/mi.jpg" alt="">
+		<span class="arrowl"></span>
+		<span class="arrowr"></span>
+		<ol>
+			<li><a href="#" class="flash">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+		</ol>
+	</div>
+</body>
+</html>

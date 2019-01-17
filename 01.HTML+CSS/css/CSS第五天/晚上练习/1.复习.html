@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	1.复习
+		1.浮动
+			浮动的作用: 让盒子在一行上
+			浮动的单词: float:left; float:right;
+			浮动的特性: float = 行内块 +  漂浮 + 快速左右对齐
+			浮动的问题: 子元素漂浮导致父元素没有高,如何能让父盒子高度自动检测.		
+
+		2.清除浮动
+			1.避免浮动带来的问题(给父元素高度)
+			2.额外标签法
+			3.overflow:hidden;(平时用)
+			4.单伪元素清除法
+			5.双伪元素清除法(项目用)
+		3.盒子被盖住的情况
+			1.浮动影响的
+			2.子盒子大于父盒子
+			3.标签嵌套错误.
+	
+	2.css阶段学了哪些东西?
+		css阶段怎么学习?    看图说话,看的是什么??  样式
+
+		css的知识两大分类: 找标签(选择器)  改样式(css样式)
+		1.选择器
+			标签选择器 div{}
+			类选择器   .one{}  class="one"
+			id选择器   #two{}  id="two"
+			通配符选择器 *{}
+
+			后代选择器   .one li{}
+			子代选择器   .one > a{}
+			交集选择器   li.one{}
+			并集选择器   .one, .two, .three a{}
+			链接伪类选择器  a:hover{}
+
+		2.css样式
+			字体系列
+				*字体大小 font-size
+				字体粗细 font-weight
+				字体样式 font-style:italic normal;
+				字体     font-family:"微软雅黑";
+				*字体颜色 color:red;
+				*字体行高 line-height:30px;
+				字体复合属性:  font:12px/1.5 "微软雅黑";
+
+			背景系列
+				背景颜色 background-color:red;
+				背景图片 background-image:url();
+				背景位置 background-position:x y;
+				背景平铺 background-repeat:no-repeat;
+				背景固定 background-attachment:fixed;
+				背景尺寸 background-size:宽 高; cover contain;
+
+				*背景复合属性: background:url() no-repeat 0 0 red;
+
+			位置系列
+				*padding
+				*margin
+				*border
+				*float
+
+				居中:
+					*text-align:center;
+					*margin:0 auto;
+					line-height:高;					
+
+			其他
+				text-indent:2em; 文本缩进
+				*text-decoration:none; 取消下划线
+				*border-radius:50%; 圆角矩形
+				box-shadow:0 0 0 0 red;
+		3.css三大理论
+			层叠性
+			继承性
+			权重优先级
+		4.元素模式
+			display:block;
+					inline;
+					inline-block;
+		---------------------------------------------------
+		1.PS的切图
+			打开图片
+			锁定背景图层
+			测量宽高间距
+			标尺,辅助线
+			颜色吸取
+			移动切片
+
+			切图
+		2.排错技巧
+
+			1.打开页面右键,检查,打开调试器
+			2.看结构(html)
+				可以看到标签的位置以及大小
+				可以看到标签的层级嵌套关系,找出嵌套错误的标签
+			  看样式(css)
+			  	可以看到样式是否生效
+			  	可以看到样式是否被覆盖或者继承.
+</body>
+</html>
