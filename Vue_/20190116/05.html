@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        input {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        请输入内容<input type="text" v-model="msg">
+        <!-- password    text    address -->
+        <button @click="addData">点击我把input的内容的值放到数组里面去</button>
+        <ul>
+            <li v-for="(item,index) of list">
+                {{item}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        let vm = new Vue({
+            el: ".app",
+            data: {
+                msg: '我是正牌的双向数据绑定',
+                list:['叶小钗', '素还真', '一页书', '剑非道', '君奉天']
+            },
+            methods: {
+                addData(){
+                    this.list.push(this.msg);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

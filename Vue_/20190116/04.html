@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div class="app">
+        <h2>{{str}}</h2>
+        <button @click="start">点击我让文字跑起来</button>
+        <!-- <button @click="stop">点击我让文字停下来</button> -->
+    </div>
+    <script>
+        let vm = new Vue({
+            el: ".app",
+            data: {
+                str: '风满楼,卷黄沙,舞剑春秋,名震天下.雨飘渺,倦红尘,还君明珠,秋水浮萍.'
+            },
+            methods: {
+                // start() {
+                //     var start = this.str.substring(0, 1);
+                //     var end = this.str.substring(1);
+                //     this.str = end + start;
+                //     console.log('end=' + end)
+                //     console.log('start=' + start)
+                // },
+                start() {
+                    setInterval(() => {
+                        var start = this.str.substring(0, 1);
+                        var end = this.str.substring(1);
+                        this.str = end + start;
+                    }, 200)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

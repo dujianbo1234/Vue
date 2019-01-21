@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{msg}}</p>
+        <button @click="start">开始滚动</button>
+        <button @click="stop">停止滚动</button>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                msg: '<天意不假手，自来有其度；非道非无道，仗剑闯命途.>',
+                timerId:null
+            },
+            methods: {
+                start(){
+                    clearInterval(this.timerId)
+                    this.timerId = setInterval(()=>{
+                        let head = this.msg.substr(0, 1);
+                        let end = this.msg.substr(1);
+                        this.msg = end + head;
+                    },120)
+                },
+                stop(){
+                    clearInterval(this.timerId)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
