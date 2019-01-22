@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <com-one><com-one>
+    </div>
+
+    <template id="tmp">
+        <div>
+            <h3>这是用template创建的</h3>
+        </div>
+
+    </template>
+    <script>
+        // 第一种方法
+        // let com = Vue.extend({
+        //     template:'<h3>com组件创建的模版代码</h3>'
+        // })
+        // Vue.component('comOne',com)
+
+        // 注册组件(必须要注册完成后才能使用)
+        // (组件名,创建的对象)
+        
+        // 第二种方法
+        // Vue.component('comOne',{
+        //     template:'<h3>com组件创建的模版代码(推荐方法)</h3>'
+        // })
+        
+        // 第三种方法
+        Vue.component('comOne',{
+            template:'#tmp'
+        })
+
+
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                msg:''
+            }
+        })
+    </script>
+</body>
+</html>

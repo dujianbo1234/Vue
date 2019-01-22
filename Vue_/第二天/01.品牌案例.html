@@ -74,7 +74,7 @@
             },
             methods: {
                 add() {
-                    var car = {id:this.id,name:this.name,ctime:new Date()}
+                    var car = { id: this.id, name: this.name, ctime: new Date() }
                     this.list.push(car)
                     this.id = this.name = ''
                 },
@@ -86,19 +86,22 @@
                     //     }
                     // })
                     var index = this.list.findIndex(item => {
-                        if(item.id == id){
+                        if (item.id == id) {
                             return true
                         }
                     })
                     // console.log(index)
                     this.list.splice(index, 1)
                 },
-                search(keywords) { 
-                    return this.list.filter(item => {
-                        if (item.name.includes(keywords)) {
-                            return item
-                        }
-                    })
+                search(keywords) {
+                    // var newList = []
+                    // this.list.forEach(item => {
+                    //     if(item.name.indexOf(keywords) != -1){
+                    //         newList.push(item)
+                    //     }
+                    // })
+                    // return newList
+                    return this.list.filter(item => { if (item.name.includes(keywords)) { return item } })
                 }
             }
         });
