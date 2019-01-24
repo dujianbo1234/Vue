@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{msg | msgFilter('帅气'+'123')}}</p>
+    </div>
+    <script>
+        // 定义一个 Vue 全局过滤器(名字,回调函数)
+        Vue.filter('msgFilter',function(msg, arg){
+            return msg.replace(/单纯/g,arg)
+        })
+
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                msg:'曾经我也是一个单纯的骚年,单纯的我傻傻的问:谁是这个世界上最单纯的男人'
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>
