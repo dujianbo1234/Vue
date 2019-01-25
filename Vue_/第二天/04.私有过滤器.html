@@ -29,7 +29,7 @@
                 <input type="button" value="添加" class="btn btn-primary" @click="add()">
                 <label>
                     搜索名称关键字：
-                    <input type="text" class="form-control" v-model="keywords">
+                    <input type="text" class="form-control" v-model="keywords" v-focus v-color="'blue'"/>
                 </label>
             </div>
         </div>
@@ -80,6 +80,26 @@
 
         // 自定义全局首饰符
         Vue.config.keyCodes.f2 = 113 
+
+        Vue.directive('focus',{
+            inserted:function(el){
+                el.focus()
+            }
+        })
+
+        // 自定义一个字体样式
+        // Vue.directive('color',{
+        //     update:function(el){
+        //         el.style.color = 'red'
+        //     }
+        // })
+        Vue.directive('color',{
+            bind:function(el, binding){
+                el.style.color = binding.value
+            }
+        })
+
+
         // 定义一个私有(局部)过滤器(过滤器调用就近原则,如果过滤器名称一样,那么优先调用私有(局部)过滤器)
         var vm2 = new Vue({
             el: '#app2',
